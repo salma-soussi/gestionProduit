@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Photo</th>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Quantute</th>
+        <th>Categorie</th>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.id}}</td>
+        <td><img src="http://localhost:8085/restapiproduit/getImage/{{p.id}}" height="50px" width="50px" alt="test"></td>
+        <td>{{p.nom}}</td>
+        <td>{{p.prix}}</td>
+        <td>{{p.quantite}}</td>
+        <td>{{p.categorie}}</td>
+    </tr>
+
+</table>
