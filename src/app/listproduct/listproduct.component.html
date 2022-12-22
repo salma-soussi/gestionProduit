@@ -20,6 +20,7 @@
     <th>prix</th>
     <th>quantite</th>
     <th>categorie</th>
+    <th>Action</th>
   </tr>
   <tr *ngFor="let p of productsRes">
     <td>{{ p.id }}</td>
@@ -37,5 +38,6 @@
     <td>{{ p.prix }}</td>
     <td>{{ p.quantite }}</td>
     <td>{{ p.categorie }}</td>
+    <td><button type="button" (click)="productDelete(p)" class="btn btn-outline-danger">Danger</button></td>
   </tr>
 </table>

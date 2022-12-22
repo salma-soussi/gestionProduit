@@ -26,4 +26,18 @@ export class ListproductComponent implements OnInit {
       this.productsRes = data;
     });
   }
+
+  productDelete(p: Product) {
+    /*this.service.deleteProduct(id).subscribe((product) => {
+      this.products.map((prod, index) => {
+        if (prod.id === product.id) {
+          this.products.splice(index, 1);
+          this.productsRes = this.products;
+        }
+      });
+    });*/
+    this.service.deleteProduct(p.id).subscribe(() => {
+      this.productsRes.splice(this.productsRes.indexOf(p), 1);
+    });
+  }
 }
