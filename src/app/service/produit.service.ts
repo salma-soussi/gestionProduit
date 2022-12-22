@@ -14,4 +14,7 @@ export class ProduitService {
   public getAllProducts():Observable<Product[]>{
     return this.client.get<Product[]>(this.host+"/all");
   }
+  public getProduct():Observable<Product[]>{
+    return this.client.get<Product[]>(this.host+"/all");
+  }
 }
